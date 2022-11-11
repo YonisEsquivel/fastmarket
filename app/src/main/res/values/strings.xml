@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FastMarket</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="ingresa_con_tu_email_y_contrase_a_para_validar_tu_identidad">Ingresa con tu email y contraseña para validar tu identidad</string>
+    <string name="todo">TODO</string>
 </resources>
