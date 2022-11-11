@@ -36,7 +36,8 @@
         android:ems="10"
         android:hint="@string/correo_electr_nico"
         android:inputType="textPersonName"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:fontFamily="@font/fontroboto"/>
 
     <EditText
         android:id="@+id/contrasenaLogin"
@@ -52,7 +53,8 @@
         android:ems="10"
         android:hint="@string/contrasena"
         android:inputType="textPersonName"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck"
+        android:fontFamily="@font/fontroboto"/>
 
     <Button
         android:id="@+id/btningresarLogin"
@@ -64,6 +66,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="405dp"
         android:layout_marginEnd="120dp"
+        android:fontFamily="@font/fontroboto"
         android:text="@string/ingresar" />
 
     <Button
@@ -76,6 +79,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="472dp"
         android:layout_marginEnd="120dp"
+        android:fontFamily="@font/fontroboto"
         android:text="Crear Cuenta" />
 
     <TextView
@@ -91,6 +95,7 @@
         android:textAlignment="center"
         android:textStyle="bold"
         android:textSize="16.5dp"
+        android:fontFamily="@font/fontroboto"
         android:text="Ingresa con tu email y contraseña para validad tu identidad" />
 
     <TextView
@@ -107,6 +112,7 @@
         android:textAlignment="center"
         android:textColor="@color/azul_basic"
         android:textSize="16dp"
+        android:fontFamily="@font/fontroboto"
         android:textStyle="italic" />
 
 
