@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, RegistroActivity::class.java))
         }
         iniciobutton.setOnClickListener {
-            startActivity(Intent())
+            startActivity(Intent(this, HomeActivity::class.java))
         }
         recuperarButton.setOnClickListener {
             startActivity(Intent(this, RecuperarActivity::class.java))
