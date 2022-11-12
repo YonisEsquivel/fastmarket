@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_grahp"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_deseosFragment"
+            app:destination="@id/deseosFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mercadoFragment"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rutaFragment"
+            app:destination="@id/rutaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cuentaFragment"
+            app:destination="@id/cuentaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_configFragment"
+            app:destination="@id/configFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.CarritoFragment"
+        android:label="CarritoFragment" />
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.ConfigFragment"
+        android:label="ConfigFragment" />
+    <fragment
+        android:id="@+id/cuentaFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.CuentaFragment"
+        android:label="CuentaFragment" />
+    <fragment
+        android:id="@+id/deseosFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.DeseosFragment"
+        android:label="DeseosFragment" />
+    <fragment
+        android:id="@+id/mercadoFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.MercadoFragment"
+        android:label="MercadoFragment" />
+    <fragment
+        android:id="@+id/rutaFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.RutaFragment"
+        android:label="RutaFragment" />
+</navigation>

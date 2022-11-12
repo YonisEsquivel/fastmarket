@@ -16,9 +16,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginLeft="1dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="0dp"
             android:background="@drawable/bannerlogin">
         </RelativeLayout>
 
@@ -52,7 +52,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/menumercado">
+                            android:src="@drawable/menumercado"
+                            android:id="@+id/cardMenumercado">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -88,7 +89,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/menucarrito">
+                            android:src="@drawable/menucarrito"
+                            android:id="@+id/cardMenucarrito">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -124,7 +126,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/menucuenta">
+                            android:src="@drawable/menucuenta"
+                            android:id="@+id/cardMenucuenta">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -159,7 +162,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/menudeseos">
+                            android:src="@drawable/menudeseos"
+                            android:id="@+id/cardMenudeseo">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -194,7 +198,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/menumapa">
+                            android:src="@drawable/menuruta"
+                            android:id="@+id/cardMenuruta">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
@@ -229,7 +234,8 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/menuconfig">
+                            android:src="@drawable/menuconfig"
+                            android:id="@+id/cardMenuconfig">
                         </ImageView>
                         <TextView
                             android:layout_width="wrap_content"
