@@ -30,7 +30,7 @@ class MercadoAdapter:RecyclerView.Adapter<MercadoAdapter.ViewHolder>() {
         }
     }
 
-    val tittles= arrayOf("Harrina Pan", "Café Aguila Roja", "Queso Colanta",
+    val tittles= arrayOf("Harina Pan", "Café Aguila Roja", "Queso Colanta",
     "Aceite Frescampo", "Refresco Hit")
     val detalles = arrayOf("1000 gr", "500 gr", "400 gr", "3000 ml", "500 ml")
     val precios= arrayOf("$4.800", "$16.750", "$8.090", "$19.000", "$19.984", "$1.792")

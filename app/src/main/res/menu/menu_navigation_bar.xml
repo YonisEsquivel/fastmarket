@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_nav"
+        android:title="Inicio"
+        android:enabled="true"
+        android:icon="@drawable/inicio_bar">
+
+    </item>
+    <item
+        android:id="@+id/carrito_nav"
+        android:title="Carrito"
+        android:enabled="true"
+        android:icon="@drawable/carrito_bar">
+
+    </item>
+    <item
+        android:id="@+id/comentarios_nav"
+        android:title="Opina"
+        android:enabled="true"
+        android:icon="@drawable/comentarios_bar">
+
+    </item>
+    <item
+        android:id="@+id/config_bar"
+        android:title="Configuracion"
+        android:enabled="true"
+        android:icon="@drawable/config_bar">
+
+    </item>
+</menu>
