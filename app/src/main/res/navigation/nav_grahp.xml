@@ -46,11 +46,7 @@
     <fragment
         android:id="@+id/cuentaFragment"
         android:name="com.example.fastmarket.view.ui.fragments.CuentaFragment"
-        android:label="CuentaFragment" >
-        <action
-            android:id="@+id/action_cuentaFragment_self"
-            app:destination="@id/cuentaFragment" />
-    </fragment>
+        android:label="CuentaFragment" />
     <fragment
         android:id="@+id/deseosFragment"
         android:name="com.example.fastmarket.view.ui.fragments.DeseosFragment"
