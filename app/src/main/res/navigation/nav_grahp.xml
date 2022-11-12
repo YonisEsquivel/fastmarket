@@ -34,6 +34,12 @@
         <action
             android:id="@+id/action_carritoFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_carritoFragment_to_comentarioFragment"
+            app:destination="@id/comentarioFragment" />
+        <action
+            android:id="@+id/action_carritoFragment_to_configFragment"
+            app:destination="@id/configFragment" />
     </fragment>
     <fragment
         android:id="@+id/configFragment"
@@ -42,15 +48,59 @@
         <action
             android:id="@+id/action_configFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_configFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_configFragment_to_mercadoFragment"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_configFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_configFragment_to_comentarioFragment"
+            app:destination="@id/comentarioFragment" />
     </fragment>
     <fragment
         android:id="@+id/cuentaFragment"
         android:name="com.example.fastmarket.view.ui.fragments.CuentaFragment"
-        android:label="CuentaFragment" />
+        android:label="CuentaFragment" >
+        <action
+            android:id="@+id/action_cuentaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_cuentaFragment_to_mercadoFragment"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_cuentaFragment_to_comentarioFragment"
+            app:destination="@id/comentarioFragment" />
+        <action
+            android:id="@+id/action_cuentaFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_cuentaFragment_to_configFragment"
+            app:destination="@id/configFragment" />
+    </fragment>
     <fragment
         android:id="@+id/deseosFragment"
         android:name="com.example.fastmarket.view.ui.fragments.DeseosFragment"
-        android:label="DeseosFragment" />
+        android:label="DeseosFragment" >
+        <action
+            android:id="@+id/action_deseosFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_deseosFragment_to_mercadoFragment"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_deseosFragment_to_comentarioFragment"
+            app:destination="@id/comentarioFragment" />
+        <action
+            android:id="@+id/action_deseosFragment_to_configFragment"
+            app:destination="@id/configFragment" />
+        <action
+            android:id="@+id/action_deseosFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mercadoFragment"
         android:name="com.example.fastmarket.view.ui.fragments.MercadoFragment"
@@ -71,10 +121,42 @@
     <fragment
         android:id="@+id/rutaFragment"
         android:name="com.example.fastmarket.view.ui.fragments.RutaFragment"
-        android:label="RutaFragment" />
+        android:label="RutaFragment" >
+        <action
+            android:id="@+id/action_rutaFragment_to_comentarioFragment"
+            app:destination="@id/comentarioFragment" />
+        <action
+            android:id="@+id/action_rutaFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_rutaFragment_to_configFragment"
+            app:destination="@id/configFragment" />
+        <action
+            android:id="@+id/action_rutaFragment_to_mercadoFragment"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_rutaFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/comentarioFragment"
-        android:name="com.example.fastmarket.ComentarioFragment"
+        android:name="com.example.fastmarket.view.ui.fragments.ComentarioFragment"
         android:label="fragment_comentario"
-        tools:layout="@layout/fragment_comentario" />
+        tools:layout="@layout/fragment_comentario" >
+        <action
+            android:id="@+id/action_comentarioFragment_to_carritoFragment"
+            app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_comentarioFragment_to_mercadoFragment"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_comentarioFragment_to_configFragment"
+            app:destination="@id/configFragment" />
+        <action
+            android:id="@+id/action_comentarioFragment_to_mercadoFragment2"
+            app:destination="@id/mercadoFragment" />
+        <action
+            android:id="@+id/action_comentarioFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

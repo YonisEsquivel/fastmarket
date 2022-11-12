@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.fastmarket.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
+@Suppress("DEPRECATION")
 class CarritoFragment : Fragment() {
 
     override fun onCreateView(
@@ -15,6 +18,27 @@ class CarritoFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_carrito, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btm=view.findViewById<BottomNavigationView>(R.id.buttonNavigationMenu)
+        btm.setOnNavigationItemReselectedListener {
+                item ->
+            when(item.itemId) {
+                R.id.home_nav -> {
+                    findNavController().navigate(R.id.action_carritoFragment_to_homeFragment)
+                }
+                R.id.comentarios_nav ->{
+                    findNavController().navigate(R.id.action_carritoFragment_to_comentarioFragment)
+                }
+                R.id.config_bar ->{
+                    findNavController().navigate(R.id.action_carritoFragment_to_configFragment)
+                }
+                else -> false
+            }
+        }
+
     }
 
 }
