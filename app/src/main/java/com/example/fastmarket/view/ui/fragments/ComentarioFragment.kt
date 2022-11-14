@@ -8,9 +8,19 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.fastmarket.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
 class ComentarioFragment : Fragment() {
+
+    lateinit var firebaseAuth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        firebaseAuth= Firebase.auth
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +43,9 @@ class ComentarioFragment : Fragment() {
                     findNavController().navigate(R.id.action_comentarioFragment_to_carritoFragment)
                 }
                 R.id.salir_bar ->{
-                    findNavController().navigate(R.id.action_comentarioFragment_to_configFragment)
+                    firebaseAuth.signOut()
+                    findNavController().navigate(R.id.action_comentarioFragment_to_loginActivity)
+                    true
                 }
                 else -> false
             }

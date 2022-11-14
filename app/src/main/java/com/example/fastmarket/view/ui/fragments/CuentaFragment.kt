@@ -13,9 +13,19 @@ import android.widget.ImageView
 import androidx.navigation.fragment.findNavController
 import com.example.fastmarket.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
 class CuentaFragment : Fragment() {
+
+    lateinit var firebaseAuth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        firebaseAuth= Firebase.auth
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -64,7 +74,9 @@ class CuentaFragment : Fragment() {
                     findNavController().navigate(R.id.action_cuentaFragment_to_comentarioFragment)
                 }
                 R.id.salir_bar ->{
-                    findNavController().navigate(R.id.action_cuentaFragment_to_configFragment)
+                    firebaseAuth.signOut()
+                    findNavController().navigate(R.id.action_cuentaFragment_to_loginActivity)
+                    true
                 }
                 else -> false
             }

@@ -6,11 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.example.fastmarket.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
 class DeseosFragment : Fragment() {
+
+    lateinit var recyclerMercado: RecyclerView
+
+    lateinit var firebaseAuth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        firebaseAuth= Firebase.auth
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +49,9 @@ class DeseosFragment : Fragment() {
                     findNavController().navigate(R.id.action_deseosFragment_to_comentarioFragment)
                 }
                 R.id.salir_bar ->{
-                    findNavController().navigate(R.id.action_deseosFragment_to_configFragment)
+                    firebaseAuth.signOut()
+                    findNavController().navigate(R.id.action_deseosFragment_to_loginActivity)
+                    true
                 }
                 else -> false
             }

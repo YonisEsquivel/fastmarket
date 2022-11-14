@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_carritoFragment_to_configFragment"
             app:destination="@id/configFragment" />
+        <action
+            android:id="@+id/action_carritoFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/configFragment"
@@ -60,6 +63,9 @@
         <action
             android:id="@+id/action_configFragment_to_comentarioFragment"
             app:destination="@id/comentarioFragment" />
+        <action
+            android:id="@+id/action_configFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/cuentaFragment"
@@ -80,6 +86,9 @@
         <action
             android:id="@+id/action_cuentaFragment_to_configFragment"
             app:destination="@id/configFragment" />
+        <action
+            android:id="@+id/action_cuentaFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/deseosFragment"
@@ -100,6 +109,9 @@
         <action
             android:id="@+id/action_deseosFragment_to_carritoFragment"
             app:destination="@id/carritoFragment" />
+        <action
+            android:id="@+id/action_deseosFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/mercadoFragment"
@@ -140,6 +152,9 @@
         <action
             android:id="@+id/action_rutaFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_rutaFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/comentarioFragment"
@@ -161,6 +176,9 @@
         <action
             android:id="@+id/action_comentarioFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_comentarioFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <activity
         android:id="@+id/loginActivity"
