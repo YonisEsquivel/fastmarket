@@ -21,11 +21,20 @@
         android:icon="@drawable/comentarios_bar">
 
     </item>
+    <!--
     <item
         android:id="@+id/config_bar"
         android:title="Configuracion"
         android:enabled="true"
         android:icon="@drawable/config_bar">
+
+    </item>
+    -->
+    <item
+        android:id="@+id/salir_bar"
+        android:title="Salir"
+        android:enabled="true"
+        android:icon="@drawable/salir_bar">
 
     </item>
 </menu>

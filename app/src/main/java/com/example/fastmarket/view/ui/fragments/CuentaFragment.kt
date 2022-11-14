@@ -63,7 +63,7 @@ class CuentaFragment : Fragment() {
                 R.id.comentarios_nav ->{
                     findNavController().navigate(R.id.action_cuentaFragment_to_comentarioFragment)
                 }
-                R.id.config_bar ->{
+                R.id.salir_bar ->{
                     findNavController().navigate(R.id.action_cuentaFragment_to_configFragment)
                 }
                 else -> false

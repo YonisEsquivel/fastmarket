@@ -117,6 +117,9 @@
         <action
             android:id="@+id/action_mercadoFragment_to_comentarioFragment"
             app:destination="@id/comentarioFragment" />
+        <action
+            android:id="@+id/action_mercadoFragment_to_loginActivity"
+            app:destination="@id/loginActivity" />
     </fragment>
     <fragment
         android:id="@+id/rutaFragment"
@@ -159,4 +162,9 @@
             android:id="@+id/action_comentarioFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.fastmarket.view.ui.activities.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

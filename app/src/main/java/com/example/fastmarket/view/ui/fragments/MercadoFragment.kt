@@ -10,10 +10,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fastmarket.R
 import com.example.fastmarket.view.adapter.MercadoAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
 class MercadoFragment : Fragment() {
     lateinit var recyclerMercado: RecyclerView
+
+    lateinit var firebaseAuth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        firebaseAuth=Firebase.auth
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,8 +53,10 @@ class MercadoFragment : Fragment() {
                 R.id.comentarios_nav ->{
                     findNavController().navigate(R.id.action_mercadoFragment_to_comentarioFragment)
                 }
-                R.id.config_bar ->{
-                    findNavController().navigate(R.id.action_mercadoFragment_to_configFragment)
+                R.id.salir_bar ->{
+                    firebaseAuth.signOut()
+                    findNavController().navigate(R.id.action_mercadoFragment_to_loginActivity)
+                    true
                 }
                 else -> false
             }

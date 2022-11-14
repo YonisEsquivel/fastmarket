@@ -32,7 +32,7 @@ class ComentarioFragment : Fragment() {
                 R.id.carrito_nav -> {
                     findNavController().navigate(R.id.action_comentarioFragment_to_carritoFragment)
                 }
-                R.id.config_bar ->{
+                R.id.salir_bar ->{
                     findNavController().navigate(R.id.action_comentarioFragment_to_configFragment)
                 }
                 else -> false
