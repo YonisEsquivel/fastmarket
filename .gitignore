@@ -13,4 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-app/goole-services.json
+google-services.json
