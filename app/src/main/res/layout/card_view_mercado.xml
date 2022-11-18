@@ -69,8 +69,28 @@
             android:layout_below="@+id/detallesMercado"
             android:textSize="20dp"
             android:id="@+id/precioMercado">
-
         </TextView>
+
+        <ImageButton
+            android:id="@+id/add_cart"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/productoMercado"
+            android:src="@drawable/add_cart"
+            android:backgroundTint="@color/azul_basic">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/add_deseo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/productoMercado"
+            android:layout_below="@+id/add_cart"
+            android:src="@drawable/add_deseo"
+            android:backgroundTint="@color/azul_basic">
+        </ImageButton>
 
     </RelativeLayout>
 
