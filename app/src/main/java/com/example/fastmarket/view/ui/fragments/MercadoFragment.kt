@@ -41,7 +41,7 @@ class MercadoFragment : Fragment(), OnMercadoItemClickListener {
     ): View? {
         val view= inflater.inflate(R.layout.fragment_mercado, container, false)
         recyclerMercado=view.findViewById(R.id.recyclerview)
-        adapter = MercadoAdapter(requireContext())
+        adapter = MercadoAdapter(requireContext(), this)
         recyclerMercado.layoutManager=LinearLayoutManager(context)
         recyclerMercado.adapter=adapter
         observeData()
