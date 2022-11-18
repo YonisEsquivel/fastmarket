@@ -1,6 +1,5 @@
 package com.example.fastmarket.view.adapter
 
-import android.content.ClipData
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -9,37 +8,32 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.fastmarket.R
-import com.example.fastmarket.model.mercado
+import com.example.fastmarket.model.compras
 import com.squareup.picasso.Picasso
 
-class MercadoAdapter(private val context:Context, var clickListener: OnMercadoItemClickListener):RecyclerView.Adapter<MercadoAdapter.ViewHolder>() {
-    private var mercadolista= mutableListOf<mercado>()
+class ComprasAdapter(private val context:Context, var clickListener: OnCompraItemClickListener):RecyclerView.Adapter<ComprasAdapter.ViewHolder>() {
+    private var mercadolista= mutableListOf<compras>()
 
-    fun setListData(data: MutableList<mercado>){
+    fun setListData(data: MutableList<compras>){
         mercadolista=data
     }
 
     override fun onCreateViewHolder(ViewGroup: ViewGroup, i: Int):ViewHolder {
-        val v=LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_mercado,
-        ViewGroup, false)
+        val v=LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_compras,
+            ViewGroup, false)
         return ViewHolder(v)
     }
 
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        fun binWew(mercado: mercado, action: OnMercadoItemClickListener){
+        fun binWew(mercado: compras, action: OnCompraItemClickListener){
             itemView.findViewById<TextView>(R.id.productoMercado).text=mercado.producto
             itemView.findViewById<TextView>(R.id.detallesMercado).text=mercado.detalle
             itemView.findViewById<TextView>(R.id.precioMercado).text=mercado.precio
             Picasso.with(context).load(mercado.image).into(itemView.findViewById<ImageView>(R.id.imgMercado))
-            val btncarrito =itemView.findViewById<ImageButton>(R.id.add_cart)
-            val btnfavorito =itemView.findViewById<ImageButton>(R.id.add_deseo)
-            btncarrito.setOnClickListener{
+            val btneliminar_cart =itemView.findViewById<ImageButton>(R.id.eliminar_cart)
+            btneliminar_cart.setOnClickListener{
                 action.OnItemClick(mercado,adapterPosition)
-            }
-            btnfavorito.setOnClickListener {
-                action.OnDeseosClick(mercado, adapterPosition)
             }
         }
     }
@@ -56,10 +50,8 @@ class MercadoAdapter(private val context:Context, var clickListener: OnMercadoIt
             0
         }
     }
-
 }
 
-interface OnMercadoItemClickListener{
-    fun OnItemClick(mercado:mercado, position:Int)
-    fun OnDeseosClick(mercado:mercado, position:Int)
+interface OnCompraItemClickListener{
+    fun OnItemClick(mercado:compras, position:Int)
 }

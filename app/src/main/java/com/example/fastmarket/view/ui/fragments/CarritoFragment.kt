@@ -5,17 +5,29 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.fastmarket.R
+import com.example.fastmarket.model.compras
+import com.example.fastmarket.view.adapter.ComprasAdapter
+import com.example.fastmarket.view.adapter.OnCompraItemClickListener
+import com.example.fastmarket.viewmodel.ComprasViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
-class CarritoFragment : Fragment() {
+class CarritoFragment : Fragment(), OnCompraItemClickListener {
 
     lateinit var firebaseAuth: FirebaseAuth
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: ComprasAdapter
+    private val viewmodel by lazy {ViewModelProvider(this).get(ComprasViewModel::class.java)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +38,20 @@ class CarritoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_carrito, container, false)
+        val view=inflater.inflate(R.layout.fragment_carrito, container, false)
+        recyclerView=view.findViewById(R.id.recyclerviewcompra)
+        adapter= ComprasAdapter(requireContext(), this)
+        recyclerView.layoutManager=LinearLayoutManager(context)
+        recyclerView.adapter=adapter
+        observedata()
+        return view
+    }
+
+    private fun observedata() {
+        viewmodel.fetchComprasData().observe(viewLifecycleOwner, Observer{
+            adapter.setListData(it)
+            adapter.notifyDataSetChanged()
+        })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,6 +75,10 @@ class CarritoFragment : Fragment() {
             }
         }
 
+    }
+
+    override fun OnItemClick(mercado: compras, position: Int) {
+        TODO("Not yet implemented")
     }
 
 }
