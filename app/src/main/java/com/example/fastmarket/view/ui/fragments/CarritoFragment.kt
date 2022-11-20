@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import kotlin.math.roundToInt
 
 @Suppress("DEPRECATION")
 class CarritoFragment : Fragment(), OnCompraItemClickListener {
@@ -34,6 +35,8 @@ class CarritoFragment : Fragment(), OnCompraItemClickListener {
     lateinit var adapter: ComprasAdapter
     private val viewmodel by lazy {ViewModelProvider(this).get(ComprasViewModel::class.java)}
     lateinit var precioT:TextView
+    lateinit var precioSub:TextView
+    lateinit var precioIVA:TextView
     lateinit var bottoncompra:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +50,8 @@ class CarritoFragment : Fragment(), OnCompraItemClickListener {
     ): View? {
         val view=inflater.inflate(R.layout.fragment_carrito, container, false)
         precioT=view.findViewById(R.id.precio_total)
+        precioSub=view.findViewById(R.id.precio_subtotal)
+        precioIVA=view.findViewById(R.id.precio_iva)
         bottoncompra=view.findViewById(R.id.boton_compra)
         recyclerView=view.findViewById(R.id.recyclerviewcompra)
         adapter= ComprasAdapter(requireContext(), this)
@@ -106,7 +111,12 @@ class CarritoFragment : Fragment(), OnCompraItemClickListener {
                     preciouni.add(precio!!)
                 }
                 val preciototal =preciouni.mapNotNull { it.toIntOrNull() }.sum()
-                precioT.setText(Integer.toString(preciototal))
+                val preciosubtotal = ((preciototal/1.19)* 100.0).roundToInt()/100.0
+                val precioiva = ((preciototal - preciosubtotal)* 100.0).roundToInt()/100.0
+                precioT.setText("Total a pagar: $preciototal")
+                precioSub.setText("Subtotal: $preciosubtotal")
+                precioIVA.setText("IVA (19%): $precioiva")
+
             }
     }
 
