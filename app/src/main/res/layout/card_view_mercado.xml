@@ -75,7 +75,7 @@
             android:id="@+id/add_cart"
             android:layout_width="42dp"
             android:layout_height="35dp"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="250dp"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/imgMercado"
             android:src="@drawable/add_cart"
@@ -86,7 +86,7 @@
             android:layout_width="42dp"
             android:layout_height="15dp"
             android:layout_below="@id/add_cart"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="250dp"
             android:text="Añadir"
             android:textSize="11dp"
             android:textAlignment="center"
@@ -95,9 +95,9 @@
             android:textColor="@color/white"
             >
         </TextView>
-
+<!--
         <ImageButton
-            android:id="@+id/add_deseo"
+            android:id="@+id/view_detail"
             android:layout_width="42dp"
             android:layout_height="35dp"
             android:layout_marginLeft="200dp"
@@ -107,6 +107,8 @@
             android:backgroundTint="@color/rojo_basic"
             style="@style/Widget.MaterialComponents.BottomNavigationView.Colored">
         </ImageButton>
+
+
         <TextView
             android:layout_width="42dp"
             android:layout_height="15dp"
@@ -120,6 +122,7 @@
             android:textColor="@color/white"
             >
         </TextView>
+-->
 
     </RelativeLayout>
 

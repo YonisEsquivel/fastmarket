@@ -37,7 +37,7 @@ class RegistroActivity : AppCompatActivity() {
                 if (Task.isSuccessful) {
                     Toast.makeText(baseContext, "Cuenta Creada con Éxito", Toast.LENGTH_SHORT)
                         .show()
-                    startActivity(Intent(this, HomeActivity::class.java))
+                    startActivity(Intent(this, LoginActivity::class.java))
                 } else {
                     Toast.makeText(baseContext, "Error. Vuelve a Intentarlo", Toast.LENGTH_SHORT)
                         .show()

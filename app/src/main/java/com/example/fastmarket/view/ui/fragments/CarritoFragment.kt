@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -99,6 +100,10 @@ class CarritoFragment : Fragment(), OnCompraItemClickListener {
         database.collection("compras")
             .document(mercado.producto)
             .delete()
+            .addOnSuccessListener {
+                Toast.makeText(context, "Producto eliminado", Toast.LENGTH_SHORT).show()
+            }
+
     }
 
     private fun preciototal(){

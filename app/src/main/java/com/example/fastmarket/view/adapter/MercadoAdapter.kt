@@ -34,12 +34,9 @@ class MercadoAdapter(private val context:Context, var clickListener: OnMercadoIt
             itemView.findViewById<TextView>(R.id.precioMercado).text=mercado.precio
             Picasso.with(context).load(mercado.image).into(itemView.findViewById<ImageView>(R.id.imgMercado))
             val btncarrito =itemView.findViewById<ImageButton>(R.id.add_cart)
-            val btnfavorito =itemView.findViewById<ImageButton>(R.id.add_deseo)
+
             btncarrito.setOnClickListener{
                 action.OnItemClick(mercado,adapterPosition)
-            }
-            btnfavorito.setOnClickListener {
-                action.OnDeseosClick(mercado, adapterPosition)
             }
         }
     }
@@ -61,5 +58,4 @@ class MercadoAdapter(private val context:Context, var clickListener: OnMercadoIt
 
 interface OnMercadoItemClickListener{
     fun OnItemClick(mercado:mercado, position:Int)
-    fun OnDeseosClick(mercado:mercado, position:Int)
 }
